@@ -1,6 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const cors = require('cors');  // Import CORS
+const cors = require('cors'); 
 const authRoutes = require('./routes/auth');
 
 dotenv.config();
@@ -8,9 +8,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 
-app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000', 
-}));
+app.use(cors());
 
 app.use(express.json());
 
